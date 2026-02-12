@@ -11,14 +11,14 @@ const gifStages = [
 
 const noMessages = [
     "No",
-    "Are you positive? 🤔",
-    "Pookie please... 🥺",
-    "If you say no, I will be really sad...",
-    "I will be very sad... 😢",
-    "Please??? 💔",
+    "Are you suureeeeee? 🤔",
+    "Potatooes please... 🥺",
+    "Really no?? I will be tearring...",
+    "can you hear jujuman howling... 😢",
+    "Please???bai tuo? Abang?  💔",
     "Don't do this to me...",
     "Last chance! 😭",
-    "You can't catch me anyway 😜"
+    "You cant escape from me anyway 😜"
 ]
 
 const yesTeasePokes = [
@@ -67,7 +67,7 @@ function toggleMusic() {
 
 function handleYesClick() {
     if (!runawayEnabled) {
-        // Tease her to try No first
+        // Tease to try No first
         const msg = yesTeasePokes[Math.min(yesTeasedCount, yesTeasePokes.length - 1)]
         yesTeasedCount++
         showTeaseMessage(msg)
