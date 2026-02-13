@@ -32,25 +32,42 @@ let yesTeasedCount = 0
 
 let noClickCount = 0
 let runawayEnabled = false
-let musicPlaying = true
+let musicPlaying = false
 
 const catGif = document.getElementById('cat-gif')
 const yesBtn = document.getElementById('yes-btn')
 const noBtn = document.getElementById('no-btn')
 const music = document.getElementById('bg-music')
 
-// Autoplay: audio starts muted (bypasses browser policy), unmute immediately
-music.muted = true
-music.volume = 0.3
-music.play().then(() => {
-    music.muted = false
-}).catch(() => {
-    // Fallback: unmute on first interaction
-    document.addEventListener('click', () => {
-        music.muted = false
-        music.play().catch(() => {})
-    }, { once: true })
-})
+// Autoplay muted on load (browser-friendly)
+function startMutedAutoplay() {
+  music.muted = true
+  music.volume = 0.3
+
+  music.play().then(() => {
+    musicPlaying = true
+    document.getElementById('music-toggle').textContent = '🔇' // muted
+  }).catch(() => {
+    musicPlaying = false
+    document.getElementById('music-toggle').textContent = '🔇'
+  })
+}
+
+startMutedAutoplay()
+
+// Unmute + ensure playback on first user interaction
+function unlockSound() {
+  music.muted = false
+  music.play().then(() => {
+    musicPlaying = true
+    document.getElementById('music-toggle').textContent = '🔊' // audible
+  }).catch(() => {})
+}
+
+// Works on mobile + desktop
+document.addEventListener('pointerdown', unlockSound, { once: true })
+document.addEventListener('touchstart', unlockSound, { once: true, passive: true })
+document.addEventListener('keydown', unlockSound, { once: true })
 
 function toggleMusic() {
     if (musicPlaying) {
