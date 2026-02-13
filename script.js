@@ -1,12 +1,12 @@
 const gifStages = [
-    "https://tenor.com/view/happy-cat-gif-10804346947536782797",    // 0 normal
-    "https://media1.tenor.com/m/uDugCXK4vI4AAAAd/chiikawa-hachiware.gif",  // 1 confused
-    "https://media.tenor.com/f_rkpJbH1s8AAAAj/somsom1012.gif",             // 2 pleading
-    "https://media.tenor.com/OGY9zdREsVAAAAAj/somsom1012.gif",             // 3 sad
-    "https://media1.tenor.com/m/WGfra-Y_Ke0AAAAd/chiikawa-sad.gif",       // 4 sadder
+    "https://c.tenor.com/lfDATg4Bhc0AAAAd/tenor.gif",    // 0 normal
+    "https://c.tenor.com/HWlXt1G-wn8AAAAC/tenor.gif",  // 1 confused
+    "https://media.tenor.com/IYdap55unFgAAAAi/nod-cat-nod.gif",             // 2 pleading
+    "https://c.tenor.com/BhWz3LdQ4SIAAAAC/tenor.gif",             // 3 sad
+    "https://c.tenor.com/DrBkLuUnJ_wAAAAd/tenor.gif",       // 4 sadder
     "https://media.tenor.com/CivArbX7NzQAAAAj/somsom1012.gif",             // 5 devastated
-    "https://media.tenor.com/5_tv1HquZlcAAAAj/chiikawa.gif",               // 6 very devastated
-    "https://media1.tenor.com/m/uDugCXK4vI4AAAAC/chiikawa-hachiware.gif"  // 7 crying runaway
+    "https://c.tenor.com/mnSmkhnUpesAAAAd/tenor.gif",               // 6 very devastated
+    "https://c.tenor.com/2pdRqiTB2GMAAAAd/tenor.gif"  // 7 crying runaway
 ]
 
 const noMessages = [
