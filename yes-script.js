@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
     launchConfetti()
 
     // Autoplay music (works since user clicked Yes to get here)
-    const music = document.getElementById('bg-music')
+    const music = document.getElementById('bg2-music')
     music.volume = 0.3
     music.play().catch(() => {})
     musicPlaying = true
@@ -50,7 +50,7 @@ function launchConfetti() {
 }
 
 function toggleMusic() {
-    const music = document.getElementById('bg-music')
+    const music = document.getElementById('bg2-music')
     if (musicPlaying) {
         music.pause()
         musicPlaying = false
